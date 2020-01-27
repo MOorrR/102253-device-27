@@ -9,7 +9,7 @@
 <body>
   <header>
     <nav>
-      <a>
+      <a href="index.html">
         <img src="https://via.placeholder.com/163x35" width="163" height="35" alt="Логотип Device">
       </a>
 
@@ -58,12 +58,37 @@
       <li>Моноподы для селфи</li>
     </ul>
 
-    <!-- Фильтр и сортировка -->
+    <section>
+      <h2>Сортировка товаров</h2>
+      <div>
+        <span>Фильтр:</span>
+      </div>
+      <div>
+        <span>Сортировка:</span>
+        <ul>
+          <li><button type="button">По цене</button></li>
+          <li><button type="button">По типу</button></li>
+          <li><button type="button">По популярности</button></li>
+        </ul>
+        <ul>
+          <li><button type="button">По возрастанию</button></li>
+          <li><button type="button">По убыванию</button></li>
+        </ul>
+      </div>
+    </section>
 
     <section>
       <h2>Фильтр товаров</h2>
       <form action="#" method="get">
-        <!-- Стоимость -->
+        <section>
+          <h3>Стоимость</h3>
+          <label>
+            от 0
+            <input type="range" name="price" id="price" min="0" max="0" step="1">
+            до 5000
+          </label>
+        </section>
+
         <section>
           <h3>Цвет</h3>
           <ul>
@@ -195,13 +220,18 @@
         </li>
       </ul>
 
-      <!-- Здесь будет пагинация -->
-
+      <ul>
+        <li><a>Назад</a></li>
+        <li><a>1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">Вперед</a></li>
+      </ul>
     </section>
   </main>
 
   <footer>
-    <a>
+    <a href="index.html">
       <img src="https://via.placeholder.com/163x35" width="163" height="35" alt="Логотип Device">
     </a>
 
