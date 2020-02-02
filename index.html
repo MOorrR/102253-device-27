@@ -56,24 +56,25 @@
       </a>
 
       <form action="https://echo.htmlacademy.ru" method="get">
-        <input type="search" name="search" id="search">
+        <label class="visually-hidden" for="input-search">Поиск по сайту</label>
+        <input type="search" name="search" id="input-search">
         <button type="submit">Найти</button>
       </form>
 
       <ul>
         <li>
-          <button type="button">
+          <a href="login.html">
             <svg width="13" height="12" viewBox="0 0 13 12">
               <use xlink:href="#icon-user"/>
             </svg>
             Войти
-          </button>
+          </a>
         </li>
       </ul>
 
       <ul>
         <li>
-          <a href="#">
+          <a href="compare.html">
             <svg width="10" height="10" viewBox="0 0 10 10">
               <use xlink:href="#icon-compare"/>
             </svg>
@@ -81,7 +82,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="cart.html">
             <svg width="12" height="12" viewBox="0 0 12 12">
               <use xlink:href="#icon-cart"/>
             </svg>
@@ -94,16 +95,16 @@
         <li>
           <a href="catalog.html">Каталог товаров</a>
           <ul>
-            <li><a href="#">Виртуальная реальность</a></li>
+            <li><a href="vr.html">Виртуальная реальность</a></li>
             <li><a href="catalog.html">Моноподы для селфи</a></li>
-            <li><a href="#">Экшн-камеры</a></li>
+            <li><a href="cameras.html">Экшн-камеры</a></li>
           </ul>
           <ul>
-            <li><a href="#">Фитнес-браслеты</a></li>
-            <li><a href="#">Умные часы</a></li>
+            <li><a href="bracelets.html">Фитнес-браслеты</a></li>
+            <li><a href="watch.html">Умные часы</a></li>
           </ul>
           <ul>
-            <li><a href="#">Квадрокоптеры</a></li>
+            <li><a href="quadcopters.html">Квадрокоптеры</a></li>
           </ul>
         </li>
         <li><a href="delivery.html">Доставка</a></li>
@@ -114,7 +115,7 @@
   </header>
 
   <main>
-    <h1>Девайс - интернет-магазин гаджетов</h1>
+    <h1 class="visually-hidden">Девайс - интернет-магазин гаджетов</h1>
 
     <section>
       <h2>Популярные товары</h2>
@@ -304,11 +305,11 @@
       <h2>Контакты</h2>
       <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
       <p>
-        <a href="#">
+        <a href="map.html">
           <img src="img/map.jpg" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15">
         </a>
       </p>
-      <a href="#">Напишите нам</a>
+      <a href="contact-form.html">Напишите нам</a>
     </section>
   </main>
 
@@ -319,18 +320,18 @@
 
     <ul>
       <li>
-        <button type="button">
+        <a href="login.html">
           <svg class="icon-footer" width="13" height="12">
             <use xlink:href="#icon-user"/>
           </svg>
           Войти
-        </button>
+        </a>
       </li>
     </ul>
 
     <ul>
       <li>
-        <a href="#">
+        <a href="compare.html">
           <svg class="icon-footer" width="10" height="10">
             <use xlink:href="#icon-compare"/>
           </svg>
@@ -338,7 +339,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="cart.html">
           <svg class="icon-footer" width="12" height="12">
             <use xlink:href="#icon-cart"/>
           </svg>
@@ -360,7 +361,7 @@
     <ul>
       <li>
         <a href="#" target="_blank">
-          Ссылка на facebook
+          <span class="visually-hidden">Ссылка на facebook</span>
           <svg class="social-footer" width="32" height="32" viewBox="0 0 32 32">
             <use xlink:href="#icon-facebook"/>
           </svg>
@@ -368,7 +369,7 @@
       </li>
       <li>
         <a href="#" target="_blank">
-          Ссылка на instagram
+          <span class="visually-hidden">Ссылка на instagram</span>
           <svg class="social-footer" width="32" height="32" viewBox="0 0 32 32">
             <use xlink:href="#icon-instagram"/>
           </svg>
@@ -376,7 +377,7 @@
       </li>
       <li>
         <a href="#" target="_blank">
-          Ссылка на twitter
+          <span class="visually-hidden">Ссылка на twitter</span>
           <svg class="social-footer" width="32" height="32" viewBox="0 0 32 32">
             <use xlink:href="#icon-twitter"/>
           </svg>
@@ -385,7 +386,7 @@
     </ul>
 
     <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
-      HTML Academy - Профессиональный онлайн‑курс HTML и CSS, уровень 1
+      <span class="visually-hidden">HTML Academy - Профессиональный онлайн‑курс HTML и CSS, уровень 1</span>
       <svg class="icon-footer" width="27" height="34" viewBox="0 0 27 34">
         <use xlink:href="#logo-html"/>
       </svg>
@@ -393,10 +394,24 @@
   </footer>
 
   <section>
-    <h2>Напишите нам</h2>
-    <!-- Здесь будет форма -->
+    <h2 class="visually-hidden">Напишите нам</h2>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <p>
+        <label for="contact-name">Ваше имя:</label>
+        <input type="text" name="name" id="contact-name" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label for="contact-email">Ваш e-mail:</label>
+        <input type="email" name="email" id="contact-email" placeholder="email@example.com">
+      </p>
+      <p>
+        <label for="contact-message">Текст письма:</label>
+        <textarea name="message" id="contact-message" placeholder="В свободной форме"></textarea>
+      </p>
+      <button type="submit">Отправить</button>
+    </form>
     <button type="button">
-      Закрыть
+      <span class="visually-hidden">Закрыть</span>
       <svg class="icon-modal-close" width="55" height="55" viewBox="0 0 55 55">
         <use xlink:href="#icon-modal-close"/>
       </svg>
@@ -404,12 +419,12 @@
   </section>
 
   <section>
-    <h2>Как до нас добраться</h2>
+    <h2 class="visually-hidden">Как до нас добраться</h2>
     <p>
       <img src="img/map-big.jpg" width="960" height="559" alt="Карта офиса по адресу улица Строителей, 15">
     </p>
     <button type="button">
-      Закрыть
+      <span class="visually-hidden">Закрыть</span>
       <svg class="icon-modal-close" width="55" height="55" viewBox="0 0 55 55">
         <use xlink:href="#icon-modal-close"/>
       </svg>
