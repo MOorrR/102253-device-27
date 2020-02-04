@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Иван Демьяненко](https://up.htmlacademy.ru/htmlcss/27/user/102253).
-* Наставник: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
+* Наставник: [Роман Кушнир](https://htmlacademy.ru/profile/id485545).
 
 ---
 
