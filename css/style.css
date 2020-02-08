@@ -42,7 +42,6 @@
 
 html {
   box-sizing: border-box;
-  font-weight: 400;
 }
 
 *,
@@ -55,7 +54,7 @@ body {
   font-weight: 300;
   font-size: 15px;
   line-height: 30px;
-  font-family: "Open Sans", Tahoma, sans-serif;
+  font-family: "Open Sans", "Tahoma", sans-serif;
   color: #464646;
   letter-spacing: 0.15px;
 
@@ -81,7 +80,7 @@ a {
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
-  font-family: Gilroy, Verdana, sans-serif;
+  font-family: "Gilroy", "Verdana", sans-serif;
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
@@ -169,7 +168,7 @@ a {
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
-  font-family: Gilroy, Verdana, sans-serif;
+  font-family: "Gilroy", "Verdana", sans-serif;
   text-transform: uppercase;
   letter-spacing: 3.6px;
 }
@@ -189,22 +188,22 @@ a {
   font-weight: 800;
   font-size: 47px;
   line-height: 56px;
-  font-family: Gilroy, Verdana, sans-serif;
+  font-family: "Gilroy", "Verdana", sans-serif;
   color: #000000;
   letter-spacing: 0.47px;
 }
 
-.popular-defenation dt {
+.popular-definition dt {
   font-size: 13px;
   line-height: 20px;
   letter-spacing: 0.13px;
 }
 
-.popular-defenation dd {
+.popular-definition dd {
   font-weight: 300;
   font-size: 36px;
   line-height: 48px;
-  font-family: Gilroy, Verdana, sans-serif;
+  font-family: "Gilroy", "Verdana", sans-serif;
   color: #000000;
   letter-spacing: 0.36px;
 }
@@ -217,7 +216,7 @@ a {
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
-  font-family: Gilroy, Verdana, sans-serif;
+  font-family: "Gilroy", "Verdana", sans-serif;
   color: #000000;
   letter-spacing: 0.18px;
 }
@@ -235,7 +234,7 @@ a {
   font-weight: 800;
   font-size: 47px;
   line-height: 48px;
-  font-family: Gilroy, Verdana, sans-serif;
+  font-family: "Gilroy", "Verdana", sans-serif;
   color: #000000;
   letter-spacing: 0.47px;
 }
@@ -255,7 +254,7 @@ a {
   font-weight: 800;
   font-size: 47px;
   line-height: 48px;
-  font-family: Gilroy, Verdana, sans-serif;
+  font-family: "Gilroy", "Verdana", sans-serif;
   color: #000000;
   letter-spacing: 0.47px;
 }
@@ -268,7 +267,7 @@ a {
   font-weight: 800;
   font-size: 16px;
   line-height: 40px;
-  font-family: Gilroy, Verdana, sans-serif;
+  font-family: "Gilroy", "Verdana", sans-serif;
   color: #000000;
 }
 
@@ -314,10 +313,19 @@ a {
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
-  font-family: Gilroy, Verdana, sans-serif;
+  font-family: "Gilroy", "Verdana", sans-serif;
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 3.6px;
+}
+
+.footer-site-nav a:hover,
+.footer-site-nav a:focus {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-site-nav a:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .footer-phone {
@@ -354,7 +362,7 @@ a {
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
-  font-family: Gilroy, Verdana, sans-serif;
+  font-family: "Gilroy", "Verdana", sans-serif;
   color: #000000;
 }
 
