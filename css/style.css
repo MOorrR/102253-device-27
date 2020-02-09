@@ -404,7 +404,7 @@ a {
   list-style: none;
 }
 
-.catalog-item-title h3 {
+.product-title h3 {
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
@@ -429,7 +429,7 @@ a {
   color: rgba(0, 0, 0, 0.2);
 }
 
-.catalog-item-price b {
+.product-price b {
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
