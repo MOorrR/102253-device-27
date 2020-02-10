@@ -109,6 +109,8 @@ a {
 /* Header styles */
 
 .main-nav {
+  position: relative;
+  
   display: flex;
   flex-direction: column;
   margin-top: 40px;
@@ -206,8 +208,6 @@ a {
 }
 
 .site-nav {
-  position: relative;
-
   display: flex;
   margin: 0;
   padding: 0;
@@ -234,8 +234,8 @@ a {
 
 .catalog-nav-wrap {
   position: absolute;
-  right: -60px;
-  left: -60px;
+  right: 0;
+  left: 0;
 
   display: flex;
   padding-top: 30px;
