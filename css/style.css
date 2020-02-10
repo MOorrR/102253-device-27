@@ -692,10 +692,15 @@ a {
   list-style: none;
 }
 
-.catalog-list li {
+.catalog-item {
   width: 360px;
   margin-right: 20px;
+  margin-bottom: 45px;
   margin-left: 20px;
+}
+
+.catalog-item:nth-last-child(-n+2) {
+  margin-bottom: 40px;
 }
 
 .product-title h3 {
