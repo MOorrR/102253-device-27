@@ -61,28 +61,32 @@ body {
   background-color: #ffffff;
 }
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   padding: 0;
   overflow: hidden;
-
+  white-space: nowrap;
   border: 0;
-
   clip: rect(0 0 0 0);
+  clip-path: inset(100%);
 }
 
-a {
-  text-decoration: none;
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .btn {
