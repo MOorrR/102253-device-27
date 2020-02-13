@@ -90,23 +90,47 @@ img {
 }
 
 .btn {
+  position: relative;
+
+  display: inline-block;
+  width: 260px;
+  height: 40px;
+
   font-weight: 800;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 40px;
   font-family: "Gilroy", "Verdana", sans-serif;
+  text-align: center;
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 3.6px;
 
-  background-color: #f0c52e;
+  background-color: transparent;
   border: none;
   cursor: pointer;
 }
 
-.btn:hover,
-.btn:focus {
-  /* Стили при наведении */
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  z-index: -1;
+
+  height: 8px;
+  margin-top: -4px;
+
+  background-color: #f0c52e;
+
+  transition: 0.3s ease;
+}
+
+.btn:hover::before,
+.btn:focus::before {
+  top: 4px;
+  height: 40px;
 }
 
 .btn:active {
@@ -499,6 +523,9 @@ img {
 }
 
 .services-nav {
+  position: relative;
+  z-index: 1;
+  
   width: 284px;
   margin-right: 116px;
 }
