@@ -126,7 +126,7 @@ img {
   flex-direction: column;
   margin-top: 40px;
   padding-right: 60px;
-  padding-bottom: 30px;
+  padding-bottom: 47px;
   padding-left: 60px;
 
   background-color: #f7e296;
@@ -137,23 +137,16 @@ img {
 }
 
 .main-nav a {
+  display: inline-block;
+
   color: #000000;
-}
-
-.main-nav a:hover,
-.main-nav a:focus {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.main-nav a:active {
-  color: rgba(0, 0, 0, 0.3);
 }
 
 .main-header-logo {
   width: 163px;
   height: 35px;
   margin-top: -18px;
-  margin-bottom: 26px;
+  margin-bottom: 18px;
 }
 
 .main-header-logo[href]:hover,
@@ -167,33 +160,79 @@ img {
 
 .header-row {
   display: flex;
-  margin-bottom: 50px;
+  height: 49px;
+  margin-bottom: 25px;
 }
 
 .search-form {
-  width: 440px;
-  margin-right: 100px;
+  display: flex;
+  width: 441px;
+  margin-right: 99px;
 }
 
 .input-search {
+  flex-grow: 1;
+  padding-left: 36px;
+
   background-color: transparent;
+  background-image: url("../img/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 3px center;
   border: none;
+  border-bottom: 2px solid transparent;
+  outline: none;
 }
 
-.input-search:hover {
-  /* Стили при наведении */
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+.input-search::placeholder {
+  color: rgba(0, 0, 0, 0.3);
 }
 
-.input-search:focus {
+.input-search:hover::placeholder,
+.input-search:focus::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* Internet Explorer 10-11 */
+.input-search:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.input-search:hover:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* Microsoft Edge */
+.input-search::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.input-search:hover::-ms-input-placeholder,
+.input-search:focus::-ms-input-placeholder  {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.input-search:focus,
+.input-search:not(:placeholder-shown) {
   border-bottom: 2px solid #000000;
 }
 
 .btn-search {
+  width: 85px;
+
   color: #000000;
 
   background-color: transparent;
   border: 2px solid #000000;
+  visibility: hidden;
   cursor: pointer;
+  opacity: 0;
+}
+
+.input-search:focus + .btn-search,
+.input-search:not(:placeholder-shown) + .btn-search {
+  visibility: visible;
+  opacity: 1;
 }
 
 .btn-search:hover,
@@ -209,13 +248,53 @@ img {
 
 .user-nav {
   margin: 0;
+  margin-top: 8px;
   padding: 0;
 }
 
+.user-link {
+  padding-left: 26px;
+
+  background-image: url("../img/icon-user.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
 .shop-nav {
+  display: flex;
   margin: 0;
+  margin-top: 8px;
   margin-left: auto;
   padding: 0;
+}
+
+.shop-link {
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.compare-link {
+  margin-right: 41px;
+  padding-left: 20px;
+
+  background-image: url("../img/icon-compare.svg");
+}
+
+.cart-link {
+  padding-left: 22px;
+  background-image: url("../img/icon-cart.svg");
+}
+
+.user-nav a:hover,
+.shop-nav a:hover,
+.user-nav a:focus,
+.shop-nav a:focus {
+  opacity: 0.6;
+}
+
+.user-nav a:active,
+.shop-nav a:active {
+  opacity: 0.3;
 }
 
 .site-nav {
@@ -224,8 +303,17 @@ img {
   padding: 0;
 }
 
+.site-nav a:hover,
+.site-nav a:focus {
+  opacity: 0.6;
+}
+
+.site-nav a:active {
+  opacity: 0.3;
+}
+
 .site-nav-item:nth-child(2) {
-  margin-right: 33px;
+  margin-right: 34px;
   margin-left: auto;
 }
 
@@ -247,6 +335,7 @@ img {
   position: absolute;
   right: 0;
   left: 0;
+  z-index: 10;
 
   display: flex;
   padding-top: 30px;
@@ -255,9 +344,29 @@ img {
   padding-left: 60px;
 
   background-color: #f7e296;
+  visibility: hidden;
+  opacity: 0;
+}
 
-/* Временно */
-  opacity: 0.5;
+.catalog-nav-item:hover .catalog-nav-wrap {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Псевдокласс для перехода между ссылками в выпадающем меню с помощью Tab (не работает в IE11 и Edge).
+   Если это правило объединить с предыдущим, то выподающее меню перестанет работать в IE и Edge. */
+.catalog-nav-item:focus-within .catalog-nav-wrap {
+  visibility: visible;
+  opacity: 1;
+}
+
+.catalog-nav-link {
+  margin-left: -1px;
+  padding-right: 32px;
+
+  background-image: url("../img/icon-plus.svg");
+  background-repeat: no-repeat;
+  background-position: right 3px center;
 }
 
 .catalog-nav-list {
@@ -501,34 +610,23 @@ img {
   color: rgba(0, 0, 0, 0.1);
 }
 
-.catalog-wrapper {
-  background-image: 
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 71px, transparent 71px),
-    linear-gradient(to right, #ebebeb 29%, transparent 29%);
+.catalog-header {
+  background-image: linear-gradient(to right, #d9d9d9 29%, #ebebeb 29%);
 }
 
-.catalog-filter-column {
-  background-color: #ebebeb;
-}
-
-.catalog-wrapper .container {
+.catalog-header .container {
   display: flex;
 }
 
-.filter {
+.filter-title-ghost {
+  flex-shrink: 0;
   width: 328px;
-}
-
-.filter h2 {
-  margin: 0;
   padding-top: 30px;
-  padding-left: 68px;
-  padding-bottom: 30px;
-  padding-right: 60px;
+  padding-left: 60px;
 
   font-weight: 800;
   font-size: 16px;
-  line-height: 11px;
+  line-height: 24px;
   font-family: "Gilroy", "Verdana", sans-serif;
   color: #000000;
   text-transform: uppercase;
@@ -537,48 +635,10 @@ img {
   background-color: #d9d9d9;
 }
 
-.filter-form {
-  padding-top: 69px;
-  padding-left: 68px;
-  padding-right: 60px;
-}
-
-.filter-fieldset-wrap {
-  border-top: 2px solid #000000;
-}
-
-.filter fieldset {
-  border: none;
-}
-
-.filter legend {
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 24px;
-  font-family: "Gilroy", "Verdana", sans-serif;
-  color: #000000;
-  letter-spacing: 0.18px;
-}
-
-.filter-list {
-  list-style: none;
-}
-
-.filter-label {
-  font-size: 14px;
-  line-height: 40px;
-  color: #000000;
-  letter-spacing: 0.14px;
-}
-
-.filter-input:disabled + .filter-label {
-  color: #a6a6a6;
-}
-
 .sorting {
   display: flex;
-  align-items: center;
-  min-height: 71px;
+  flex-grow: 1;
+  padding-top: 30px;
   padding-left: 74px;
 }
 
@@ -597,6 +657,7 @@ img {
 
 .sorting-list {
   display: flex;
+  width: 460px;
   margin: 0;
   padding: 0;
 
@@ -639,6 +700,53 @@ img {
 .sorting-arrows a:active,
 .sorting-arrows a.active {
   opacity: 1;
+}
+
+.catalog-main {
+  background-image: linear-gradient(to right, #ebebeb 29%, transparent 29%);
+}
+
+.catalog-main .container {
+  display: flex;
+}
+
+.filter {
+  flex-shrink: 0;
+  width: 328px;
+
+  background-color: #ebebeb;
+}
+
+.filter-fieldset-wrap {
+  border-top: 2px solid #000000;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter legend {
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "Gilroy", "Verdana", sans-serif;
+  color: #000000;
+  letter-spacing: 0.18px;
+}
+
+.filter-list {
+  list-style: none;
+}
+
+.filter-label {
+  font-size: 14px;
+  line-height: 40px;
+  color: #000000;
+  letter-spacing: 0.14px;
+}
+
+.filter-input:disabled + .filter-label {
+  color: #a6a6a6;
 }
 
 .catalog {
