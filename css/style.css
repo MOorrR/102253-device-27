@@ -93,8 +93,8 @@ img {
   position: relative;
 
   display: inline-block;
-  min-width: 260px;
-  padding: 8px 20px;
+  width: 260px;
+  padding: 8px 12px;
 
   font-weight: 800;
   font-size: 18px;
@@ -630,7 +630,7 @@ img {
 
 .popular-info .btn {
   align-self: flex-start;
-  min-width: 220px;
+  width: 220px;
 }
 
 .category {
@@ -735,50 +735,105 @@ img {
 
 .services {
   margin-bottom: 94px;
-  padding-bottom: 70px;
+  padding-bottom: 69px;
 
-  background-color: #e5e5e5;
+  background-image: linear-gradient(to bottom, transparent 101px, #e5e5e5 101px);
 }
 
 .services .container {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
 }
 
-.services-list,
-.services-nav {
-  margin: 0;
-  padding: 0;
+.services-controls {
+  position: relative;
+  z-index: 1;
 
-  list-style: none;
+  flex-shrink: 0;
+  width: 284px;
+  margin-right: 116px;
+  padding-top: 81px;
+  padding-bottom: 71px;
+
+  border-right: 7px solid #000000;
+}
+
+.service-btn {
+  width: 160px;
+}
+
+.service-btn:not(:last-child) {
+  margin-bottom: 24px;
 }
 
 .services-list {
-  width: 715px;
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+  padding-top: 74px;
+
+  list-style: none;
+
+  background-repeat: no-repeat;
+}
+
+#delivery:checked ~ .services-list {
+  background-image: url(../img/delivery.svg);
+  background-position: top 86px right 66px;
+}
+
+#guarantee:checked ~ .services-list {
+  background-image: url(../img/guarantee.svg);
+  background-position: top 62px right 46px;
+}
+
+#credit:checked ~ .services-list {
+  background-image: url(../img/credit.svg);
+  background-position: top 62px right 70px;
+}
+
+.service-item {
+  display: none;
+}
+
+#delivery:checked ~ .services-list #delivery-slide,
+#guarantee:checked ~ .services-list #guarantee-slide,
+#credit:checked ~ .services-list #credit-slide {
+  display: block;
+}
+
+#delivery:checked ~ .services-controls label[for="delivery"],
+#guarantee:checked ~ .services-controls label[for="guarantee"],
+#credit:checked ~ .services-controls label[for="credit"] {
+  color: #f7e184;
+}
+
+#delivery:checked ~ .services-controls label[for="delivery"]::before,
+#guarantee:checked ~ .services-controls label[for="guarantee"]::before,
+#credit:checked ~ .services-controls label[for="credit"]::before {
+  top: 4px;
+  right: -117px;
+  height: 100%;
+
+  background-color: #000000;
 }
 
 .service-item h3 {
+  margin: 0;
+  margin-bottom: 31px;
+
   font-weight: 800;
   font-size: 47px;
   line-height: 48px;
   font-family: "Gilroy", "Verdana", sans-serif;
   color: #000000;
-  letter-spacing: 0.47px;
+  letter-spacing: 1.1px;
 }
 
-.services-nav {
-  position: relative;
-  z-index: 1;
-  
-  width: 284px;
-  margin-right: 116px;
-}
+.service-item p {
+  width: 455px;
+  margin: 0;
 
-.service-btn:active {
-  color: #f7e184;
-
-  background-color: #000000;
+  letter-spacing: 0.25px;
 }
 
 .company {

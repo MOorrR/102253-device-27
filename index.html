@@ -212,33 +212,38 @@
 
     <section class="services">
       <h2 class="visually-hidden">Услуги</h2>
-      <div class="container">
+      <div class="services-slider container">
+        <input class="visually-hidden" type="radio" id="delivery" name="services-toggle" checked>
+        <input class="visually-hidden" type="radio" id="guarantee" name="services-toggle">
+        <input class="visually-hidden" type="radio" id="credit" name="services-toggle">
+        
+        <div class="services-controls">
+          <label class="btn service-btn" for="delivery">Доставка</label>
+          <label class="btn service-btn" for="guarantee">Гарантия</label>
+          <label class="btn service-btn" for="credit">Кредит</label>
+        </div>
+
         <ul class="services-list">
-          <li class="service-item">
+          <li class="service-item" id="delivery-slide">
             <h3>Доставка</h3>
             <p>
               Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
             </p>
           </li>
-          <li class="service-item">
+          <li class="service-item" id="guarantee-slide">
             <h3>Гарантия</h3>
             <p>
               Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
               Товар, не дом, конечно же.
             </p>
           </li>
-          <li class="service-item">
+          <li class="service-item" id="credit-slide">
             <h3>Кредит</h3>
             <p>
               Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br>
               условия кредита. Выгодные для нашего банка, разумеется.
             </p>
           </li>
-        </ul>
-        <ul class="services-nav">
-          <li><a class="btn service-btn" href="delivery.html">Доставка</a></li>
-          <li><a class="btn service-btn" href="guarantee.html">Гарантия</a></li>
-          <li><a class="btn service-btn" href="credit.html">Кредит</a></li>
         </ul>
       </div>
     </section>
