@@ -837,7 +837,7 @@ img {
 }
 
 .company {
-  margin-bottom: 90px;
+  margin-bottom: 93px;
 }
 
 .company-list {
@@ -849,8 +849,39 @@ img {
   list-style: none;
 }
 
-.company-item {
+.company-item a {
+  display: block;
   width: 260px;
+  height: 100px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.company-item a[href^="dgi"] {
+  background-image: url("../img/logo-bg-dgi.jpg");
+}
+
+.company-item a[href^="sp-gadjets"] {
+  background-image: url("../img/logo-bg-sp-gadjets.jpg");
+}
+
+.company-item a[href^="gopro"] {
+  background-image: url("../img/logo-bg-gopro.jpg");
+}
+
+.company-item a[href^="vive"] {
+  background-image: url("../img/logo-bg-vive.jpg");
+}
+
+.company-item a img {
+  opacity: 0;
+
+  transition: 0.3s ease;
+}
+
+.company-item a:hover img {
+  opacity: 1;
 }
 
 .about-and-contacts {
@@ -860,7 +891,7 @@ img {
 }
 
 .about {
-  width: 480px;
+  width: 475px;
 }
 
 .contacts {
@@ -869,6 +900,12 @@ img {
 
 .about h2,
 .contacts h2 {
+  position: relative;
+  left: -2px;
+
+  margin: 0;
+  margin-bottom: 43px;
+
   font-weight: 800;
   font-size: 47px;
   line-height: 48px;
@@ -877,22 +914,73 @@ img {
   letter-spacing: 0.47px;
 }
 
+.about h2::before,
+.contacts h2::before {
+  content: "";
+  position: relative;
+  left: 2px;
+
+  display: block;
+  width: 80px;
+  height: 7px;
+  margin-bottom: 45px;
+
+  background-color: #000000;
+}
+
 .about p,
 .contacts p {
+  margin: 0;
+  
   letter-spacing: 0;
 }
 
+.about p {
+  margin-bottom: 30px;
+}
+
 .about-list {
+  margin: 0;
+  margin-top: 66px;
+  margin-bottom: 54px;
+  padding: 0;
+
   list-style: none;
 }
 
 .about-list li {
+  position: relative;
+
+  padding-left: 35px;
+
   font-weight: 800;
   font-size: 16px;
   line-height: 40px;
   font-family: "Gilroy", "Verdana", sans-serif;
   color: #000000;
   letter-spacing: 0;
+}
+
+.about-list li:before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 1px;
+
+  display: block;
+  width: 8px;
+  height: 8px;
+
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
+}
+
+p.contacts-text {
+  margin-bottom: 39px;
+}
+
+p.contacts-map {
+  margin-bottom: 60px;
 }
 
 .page-title {
