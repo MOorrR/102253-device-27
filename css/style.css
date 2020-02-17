@@ -213,28 +213,39 @@ img {
   outline: none;
 }
 
-/* Chrome, Firefox, Opera, Safari 10.1+ */
-.input-search::placeholder {
+.input-search::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.input-search:hover::placeholder,
-.input-search:focus::placeholder {
-  color: rgba(0, 0, 0, 0.6);
+.input-search::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.3);
 }
 
-/* Internet Explorer 10-11 */
 .input-search:-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.input-search:hover:-ms-input-placeholder {
+.input-search::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.input-search::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.input-search:hover::-webkit-input-placeholder,
+.input-search:focus::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.6);
 }
 
-/* Microsoft Edge */
-.input-search::-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.3);
+.input-search:hover::-moz-placeholder,
+.input-search:focus::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.input-search:hover:-ms-input-placeholder,
+.input-search:focus:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .input-search:hover::-ms-input-placeholder,
@@ -242,7 +253,15 @@ img {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.input-search:focus,
+.input-search:hover::placeholder,
+.input-search:focus::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.input-search:focus {
+  border-bottom: 2px solid #000000;
+}
+
 .input-search:not(:placeholder-shown) {
   border-bottom: 2px solid #000000;
 }
@@ -513,15 +532,15 @@ img {
   letter-spacing: 1.79px;
 }
 
-#popular-slide-1.popular-item::before {
+.popular-item-1::before {
   content: "01";
 }
 
-#popular-slide-2.popular-item::before {
+.popular-item-2::before {
   content: "02";
 }
 
-#popular-slide-3.popular-item::before {
+.popular-item-3::before {
   content: "03";
 }
 
@@ -875,7 +894,6 @@ img {
 .company-item a {
   display: block;
   width: 260px;
-  height: 100px;
 
   background-repeat: no-repeat;
   background-position: center;
@@ -897,7 +915,9 @@ img {
   background-image: url("../img/logo-bg-vive.jpg");
 }
 
-.company-item a img {
+.company-item img {
+  display: block;
+
   opacity: 0;
 
   transition: 0.3s ease;
@@ -1501,7 +1521,7 @@ p.contacts-map {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 300px;
+  width: 500px;
   margin: 0;
   margin-right: -11px;
   margin-bottom: -15px;
