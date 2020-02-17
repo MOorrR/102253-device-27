@@ -645,8 +645,11 @@ img {
 
 .category-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0;
+  margin-right: -20px;
+  margin-bottom: -60px;
+  margin-left: -20px;
   padding: 0;
 
   list-style: none;
@@ -654,6 +657,9 @@ img {
 
 .category-item {
   width: 160px;
+  margin-right: 20px;
+  margin-bottom: 60px;
+  margin-left: 20px;
 }
 
 .category-item a {
@@ -850,11 +856,20 @@ img {
 
 .company-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0;
+  margin-right: -20px;
+  margin-bottom: -40px;
+  margin-left: -20px;
   padding: 0;
 
   list-style: none;
+}
+
+.company-item {
+  margin-right: 20px;
+  margin-bottom: 40px;
+  margin-left: 20px;
 }
 
 .company-item a {
@@ -1484,9 +1499,13 @@ p.contacts-map {
 
 .social-list {
   display: flex;
-  justify-content: space-between;
-  width: 140px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 300px;
   margin: 0;
+  margin-right: -11px;
+  margin-bottom: -15px;
+  margin-left: -11px;
   padding: 0;
 }
 
@@ -1494,6 +1513,9 @@ p.contacts-map {
   display: block;
   width: 32px;
   height: 32px;
+  margin-right: 11px;
+  margin-bottom: 15px;
+  margin-left: 11px;
 
   background-repeat: no-repeat;
   background-position: center;
