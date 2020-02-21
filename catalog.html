@@ -340,6 +340,30 @@
       </div>
     </div>
   </footer>
+
+  <section class="modal modal-form">
+    <h2 class="visually-hidden">Напишите нам</h2>
+    <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="form-row">
+        <p class="form-group">
+          <label for="contact-name">Ваше имя:</label>
+          <input type="text" name="name" id="contact-name" placeholder="Имя Фамилия">
+        </p>
+        <p class="form-group">
+          <label for="contact-email">Ваш e-mail:</label>
+          <input type="email" name="email" id="contact-email" placeholder="email@example.com">
+        </p>
+      </div>
+      <p class="form-group">
+        <label for="contact-message">Текст письма:</label>
+        <textarea name="message" id="contact-message" placeholder="В свободной форме"></textarea>
+      </p>
+      <button class="btn" type="submit">Отправить</button>
+    </form>
+    <button class="modal-close" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+  </section>
 </body>
 
 </html>
