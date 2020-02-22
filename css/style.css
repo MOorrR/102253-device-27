@@ -2073,7 +2073,18 @@ a.footer-user-logout {
   width: 200px;
 }
 
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+  border: none;
+}
+
 .modal-map p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
   margin: 0;
 }
 
@@ -2087,6 +2098,7 @@ a.footer-user-logout {
   position: absolute;
   top: 22px;
   right: 22px;
+  z-index: 10;
 
   display: block;
   width: 55px;
