@@ -1931,6 +1931,46 @@ a.footer-user-logout {
   opacity: 0.3;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal {
   position: fixed;
   top: 50%;
@@ -1939,14 +1979,18 @@ a.footer-user-logout {
 
   display: none;
   width: 960px;
+  margin-top: -280px;
+  margin-left: -480px;
 
   background-color: #ffffff;
   box-shadow: 0 10px 20px 0 rgba(4, 6, 6, 0.2);
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
 }
 
 .modal-show {
   display: block;
+
+  animation: bounce 0.6s;
 }
 
 .modal-form {
@@ -1954,6 +1998,10 @@ a.footer-user-logout {
   padding-left: 100px;
   padding-bottom: 79px;
   padding-right: 100px;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
 
 .form-row {
@@ -2043,6 +2091,7 @@ a.footer-user-logout {
   display: block;
   width: 55px;
   height: 55px;
+  padding: 0;
 
   background-color: transparent;
   background-image: url(../img/icon-modal-close.svg);
