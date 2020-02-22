@@ -15,7 +15,7 @@ var storageEmail = "";
 try {
   storageName = localStorage.getItem("name");
   storageEmail = localStorage.getItem("email");
-} catch {
+} catch (err) {
   isStorageSupport = false;
 }
 
