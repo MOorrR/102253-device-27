@@ -70,9 +70,9 @@
       <h2 class="visually-hidden">Популярные товары</h2>
 
       <div class="popular-slider">
-        <input class="visually-hidden" type="radio" id="popular-1" name="popular-toggle" checked>
-        <input class="visually-hidden" type="radio" id="popular-2" name="popular-toggle">
-        <input class="visually-hidden" type="radio" id="popular-3" name="popular-toggle">
+        <input class="popular-1 visually-hidden" type="radio" id="popular-1" name="popular-toggle" checked>
+        <input class="popular-2 visually-hidden" type="radio" id="popular-2" name="popular-toggle">
+        <input class="popular-3 visually-hidden" type="radio" id="popular-3" name="popular-toggle">
         
         <div class="popular-controls">
           <label for="popular-1">
@@ -213,9 +213,9 @@
     <section class="services">
       <h2 class="visually-hidden">Услуги</h2>
       <div class="services-slider container">
-        <input class="visually-hidden" type="radio" id="delivery" name="services-toggle" checked>
-        <input class="visually-hidden" type="radio" id="guarantee" name="services-toggle">
-        <input class="visually-hidden" type="radio" id="credit" name="services-toggle">
+        <input class="delivery visually-hidden" type="radio" id="delivery" name="services-toggle" checked>
+        <input class="guarantee visually-hidden" type="radio" id="guarantee" name="services-toggle">
+        <input class="credit visually-hidden" type="radio" id="credit" name="services-toggle">
         
         <div class="services-controls">
           <label class="btn service-btn" for="delivery">Доставка</label>
@@ -224,20 +224,20 @@
         </div>
 
         <ul class="services-list">
-          <li class="service-item" id="delivery-slide">
+          <li class="service-item service-item-delivery" id="delivery-slide">
             <h3>Доставка</h3>
             <p>
               Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
             </p>
           </li>
-          <li class="service-item" id="guarantee-slide">
+          <li class="service-item service-item-guarantee" id="guarantee-slide">
             <h3>Гарантия</h3>
             <p>
               Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
               Товар, не дом, конечно же.
             </p>
           </li>
-          <li class="service-item" id="credit-slide">
+          <li class="service-item service-item-credit" id="credit-slide">
             <h3>Кредит</h3>
             <p>
               Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br>

@@ -548,16 +548,23 @@ a.logout-link:focus {
   content: "03";
 }
 
-#popular-1:checked ~ .popular-list #popular-slide-1,
-#popular-2:checked ~ .popular-list #popular-slide-2,
-#popular-3:checked ~ .popular-list #popular-slide-3 {
+.popular-1:checked ~ .popular-list .popular-item-1,
+.popular-2:checked ~ .popular-list .popular-item-2,
+.popular-3:checked ~ .popular-list .popular-item-3 {
   display: flex;
 }
 
-#popular-1:checked ~ .popular-controls label[for="popular-1"],
-#popular-2:checked ~ .popular-controls label[for="popular-2"],
-#popular-3:checked ~ .popular-controls label[for="popular-3"] {
+.popular-1:checked ~ .popular-controls label[for="popular-1"],
+.popular-2:checked ~ .popular-controls label[for="popular-2"],
+.popular-3:checked ~ .popular-controls label[for="popular-3"] {
   background-image: url(../img/slider-toggle-active.svg);
+}
+
+.popular-1:focus ~ .popular-controls label[for="popular-1"],
+.popular-2:focus ~ .popular-controls label[for="popular-2"],
+.popular-3:focus ~ .popular-controls label[for="popular-3"] {
+  outline: thin dotted;
+  outline: 1px auto -webkit-focus-ring-color;
 }
 
 .popular-image {
@@ -812,17 +819,17 @@ a.logout-link:focus {
   background-repeat: no-repeat;
 }
 
-#delivery:checked ~ .services-list {
+.delivery:checked ~ .services-list {
   background-image: url(../img/delivery.svg);
   background-position: top 86px right 66px;
 }
 
-#guarantee:checked ~ .services-list {
+.guarantee:checked ~ .services-list {
   background-image: url(../img/guarantee.svg);
   background-position: top 62px right 46px;
 }
 
-#credit:checked ~ .services-list {
+.credit:checked ~ .services-list {
   background-image: url(../img/credit.svg);
   background-position: top 62px right 70px;
 }
@@ -831,27 +838,46 @@ a.logout-link:focus {
   display: none;
 }
 
-#delivery:checked ~ .services-list #delivery-slide,
-#guarantee:checked ~ .services-list #guarantee-slide,
-#credit:checked ~ .services-list #credit-slide {
+.delivery:checked ~ .services-list .service-item-delivery,
+.guarantee:checked ~ .services-list .service-item-guarantee,
+.credit:checked ~ .services-list .service-item-credit {
   display: block;
 }
 
-#delivery:checked ~ .services-controls label[for="delivery"],
-#guarantee:checked ~ .services-controls label[for="guarantee"],
-#credit:checked ~ .services-controls label[for="credit"] {
+.delivery:checked ~ .services-controls label[for="delivery"],
+.guarantee:checked ~ .services-controls label[for="guarantee"],
+.credit:checked ~ .services-controls label[for="credit"] {
   color: #f7e184;
 }
 
-#delivery:checked ~ .services-controls label[for="delivery"]::before,
-#guarantee:checked ~ .services-controls label[for="guarantee"]::before,
-#credit:checked ~ .services-controls label[for="credit"]::before {
+.delivery:checked ~ .services-controls label[for="delivery"]::before,
+.guarantee:checked ~ .services-controls label[for="guarantee"]::before,
+.credit:checked ~ .services-controls label[for="credit"]::before {
   top: 4px;
   right: -117px;
 
   height: 100%;
 
   background-color: #000000;
+}
+
+.delivery:focus ~ .services-controls label[for="delivery"],
+.guarantee:focus ~ .services-controls label[for="guarantee"],
+.credit:focus ~ .services-controls label[for="credit"] {
+  color: #f7e184;
+}
+
+.delivery:focus ~ .services-controls label[for="delivery"]::before,
+.guarantee:focus ~ .services-controls label[for="guarantee"]::before,
+.credit:focus ~ .services-controls label[for="credit"]::before {
+  top: 4px;
+  right: -117px;
+
+  height: 100%;
+
+  background-color: #000000;
+  outline: thin dotted;
+  outline: 1px auto -webkit-focus-ring-color;
 }
 
 .service-item h3 {
@@ -1406,7 +1432,7 @@ p.contacts-map {
 
 .filter-input:focus + .filter-label::before {
   outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline: 1px auto -webkit-focus-ring-color;
 }
 
 .filter-input:disabled + .filter-label {
@@ -2065,10 +2091,8 @@ a.footer-user-logout {
 .modal-map iframe {
   position: relative;
   z-index: 2;
-
-  display: block;
-
   border: none;
+  display: block;
 }
 
 .modal-map p {
