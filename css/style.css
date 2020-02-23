@@ -157,7 +157,7 @@ img {
   flex-direction: column;
   margin-top: 40px;
   padding-right: 60px;
-  padding-bottom: 47px;
+  padding-bottom: 50px;
   padding-left: 60px;
 
   background-color: #f7e296;
@@ -170,6 +170,7 @@ img {
 .main-nav a {
   display: inline-block;
 
+  vertical-align: top;
   color: #000000;
 }
 
@@ -192,7 +193,7 @@ img {
 .header-row {
   display: flex;
   height: 49px;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
 .search-form {
@@ -411,7 +412,7 @@ a.logout-link:focus {
   z-index: 30;
 
   display: flex;
-  padding-top: 18px;
+  padding-top: 21px;
   padding-right: 60px;
   padding-bottom: 34px;
   padding-left: 60px;
@@ -449,7 +450,7 @@ a.logout-link:focus {
 }
 
 .catalog-nav-list:first-child {
-  margin-right: 40px;
+  margin-right: 39px;
 }
 
 .catalog-nav-list a {
@@ -694,6 +695,8 @@ a.logout-link:focus {
 
 .category-item a {
   position: relative;
+  
+  display: block;
 }
 
 .category-item a::before {
@@ -777,6 +780,10 @@ a.logout-link:focus {
 }
 
 .services {
+  background-image: linear-gradient(to bottom, transparent 101px, #e5e5e5 101px);
+}
+
+.services .container {
   margin-bottom: 94px;
   padding-bottom: 69px;
 
@@ -1053,7 +1060,18 @@ p.contacts-text {
 }
 
 p.contacts-map {
-  margin-bottom: 60px;
+  margin-bottom: 69px;
+}
+
+.map-link,
+.map-link img {
+  display: block;
+}
+
+.map-link {
+  background-color: #eaeaea;
+  width: 560px;
+  height: 222px;
 }
 
 .page-title {
@@ -1114,6 +1132,8 @@ p.contacts-map {
 
 .catalog-header .container {
   display: flex;
+
+  background-image: linear-gradient(to right, #d9d9d9 29%, #ebebeb 29%);
 }
 
 .filter-title-ghost {
@@ -1478,8 +1498,12 @@ p.contacts-map {
 }
 
 .product-image {
+  width: 360px;
+  height: 380px;
   margin: 0;
   margin-bottom: 32px;
+
+  background-color: #eaeaea;
 }
 
 .product-image img {
@@ -1667,10 +1691,14 @@ p.contacts-map {
 /* Footer styles */
 
 .main-footer {
+  color: #ffffff;
+
+  background-color: #464646;
+}
+
+.main-footer .container {
   padding-top: 66px;
   padding-bottom: 65px;
-
-  color: #ffffff;
 
   background-color: #464646;
 }
@@ -2101,13 +2129,15 @@ a.footer-user-logout {
   left: 0;
   z-index: 1;
 
+  width: 960px;
+  height: 559px;
   margin: 0;
+
+  background-color: #eaeaea;
 }
 
 .modal-map img {
   display: block;
-  width: 960px;
-  height: 559px;
 }
 
 .modal-close {
