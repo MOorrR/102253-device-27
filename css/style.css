@@ -371,6 +371,8 @@ a.logout-link:focus {
 
 .site-nav {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
 }
@@ -615,8 +617,13 @@ a.logout-link:focus {
 }
 
 .popular-description {
+  width: 460px;
   margin: 0;
   margin-bottom: 43px;
+}
+
+.popular-item-1 .popular-description {
+  width: 490px;
 }
 
 .popular-definition {
@@ -1705,6 +1712,7 @@ p.contacts-map {
 
 .footer-row {
   display: flex;
+  justify-content: space-between;
 }
 
 .footer-row:first-child {
@@ -1862,6 +1870,8 @@ a.footer-user-logout {
 
 .footer-site-nav {
   display: flex;
+  flex-wrap: wrap;
+  width: 460px;
   margin: 0;
   margin-top: 3px;
   padding: 0;
@@ -1891,7 +1901,6 @@ a.footer-user-logout {
 }
 
 .footer-row:last-child {
-  justify-content: space-between;
   align-items: center;
   margin-top: 60px;
 }
