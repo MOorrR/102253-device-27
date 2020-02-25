@@ -737,32 +737,32 @@ a.logout-link:focus {
   background-position: center;
 }
 
-.category-item a[href^="vr"]::after {
+.category-item:nth-child(1) a::after {
   background-image: url("../img/category-vr.svg");
   background-position: 31px 52px;
 }
 
-.category-item a[href^="catalog"]::after {
+.category-item:nth-child(2) a::after {
   background-image: url("../img/category-monopods.svg");
   background-position: 38px 41px;
 }
 
-.category-item a[href^="cameras"]::after {
+.category-item:nth-child(3) a::after {
   background-image: url("../img/category-cameras.svg");
   background-position: 49px 38px;
 }
 
-.category-item a[href^="bracelets"]::after {
+.category-item:nth-child(4) a::after {
   background-image: url("../img/category-bracelets.svg");
   background-position: 28px 50px;
 }
 
-.category-item a[href^="watch"]::after {
+.category-item:nth-child(5) a::after {
   background-image: url("../img/category-watch.svg");
   background-position: 55px 32px;
 }
 
-.category-item a[href^="quadcopters"]::after {
+.category-item:nth-child(6) a::after {
   background-image: url("../img/category-quadcopters.svg");
   background-position: 13px 49px;
 }
@@ -943,19 +943,19 @@ a.logout-link:focus {
   background-position: center;
 }
 
-.company-item a[href^="dgi"] {
+.company-item:nth-child(1) a {
   background-image: url("../img/logo-bg-dgi.jpg");
 }
 
-.company-item a[href^="sp-gadjets"] {
+.company-item:nth-child(2) a {
   background-image: url("../img/logo-bg-sp-gadjets.jpg");
 }
 
-.company-item a[href^="gopro"] {
+.company-item:nth-child(3) a {
   background-image: url("../img/logo-bg-gopro.jpg");
 }
 
-.company-item a[href^="vive"] {
+.company-item:nth-child(4) a {
   background-image: url("../img/logo-bg-vive.jpg");
 }
 
@@ -1500,8 +1500,6 @@ p.contacts-map {
 
 .product-image-wrapper {
   position: relative;
-
-  cursor: pointer;
 }
 
 .product-image {
